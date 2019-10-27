@@ -34,7 +34,7 @@ module.exports = function (config) {
       cors: true,
       port: 1234,
       consumer: "cart",
-      provider: "catalog",
+      provider: "Catalog_Provider",
       dir: "pacts",
       spec: 2
     }],

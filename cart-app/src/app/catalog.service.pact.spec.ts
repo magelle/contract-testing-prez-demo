@@ -10,7 +10,7 @@ describe('CatalogService', () => {
   beforeAll(function (done) {
     provider = new PactWeb({
       consumer: 'cart',
-      provider: 'catalog',
+      provider: 'Catalog_Provider',
       port: 1234,
       host: '127.0.0.1',
     });

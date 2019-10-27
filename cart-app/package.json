@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "publish-pacts": "node publish-pacts.js"
+    "publish-pacts": "node pacts/publish-pacts.ts"
   },
   "private": true,
   "dependencies": {
