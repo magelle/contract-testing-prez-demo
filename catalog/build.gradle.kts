@@ -8,14 +8,6 @@ plugins {
 	kotlin("plugin.spring") version "1.3.50"
 }
 
-pact {
-	serviceProviders {
-		create("Catalog_Provider") {
-			hasPactsFromPactBroker(mapOf("authentication" to listOf("Bearer", "1gX52gsVt9iwwVuD9ciMaA")), "https://magelle.pact.dius.com.au")
-		}
-	}
-}
-
 group = "contract-testing"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_1_8
@@ -38,6 +30,8 @@ dependencies {
 tasks.withType<Test> {
 	useJUnitPlatform()
 	systemProperty("pact.rootDir", "build/pacts")
+	systemProperty("pact.provider.version", version)
+	systemProperty("pact.verifier.publishResults", true)
 }
 
 tasks.withType<KotlinCompile> {
