@@ -3,8 +3,17 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
 	id("org.springframework.boot") version "2.2.0.RELEASE"
 	id("io.spring.dependency-management") version "1.0.8.RELEASE"
+	id("au.com.dius.pact") version "4.0.2"
 	kotlin("jvm") version "1.3.50"
 	kotlin("plugin.spring") version "1.3.50"
+}
+
+pact {
+	publish {
+		pactDirectory = "build/pacts"
+		pactBrokerUrl = "https://magelle.pact.dius.com.au"
+		pactBrokerToken = "1gX52gsVt9iwwVuD9ciMaA"
+	}
 }
 
 group = "contract-testing"

@@ -23,3 +23,6 @@
 - On corrige, ça passe
 - On montre tout ça dans Pact Broker
 
+
+# Documentation
+- Spring + Pact exemple : https://blog.ramjee.uk/microservices-and-consumer-tests/
