@@ -27,6 +27,7 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}
+	testImplementation("au.com.dius:pact-jvm-consumer-junit5_2.12:3.5.24")
 }
 
 dependencyManagement {
@@ -37,6 +38,7 @@ dependencyManagement {
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+	systemProperty("pact.rootDir", "build/pacts")
 }
 
 tasks.withType<KotlinCompile> {
