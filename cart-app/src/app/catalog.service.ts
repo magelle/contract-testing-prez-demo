@@ -7,7 +7,7 @@ import {Observable} from "rxjs/internal/Observable";
   providedIn: 'root'
 })
 export class CatalogService {
-  private catalogUrl  = 'localhost:8080/products';
+  private catalogUrl  = '/products';
 
   constructor(private http: HttpClient) {
   }
