@@ -1,9 +1,9 @@
 {
   "consumer": {
-    "name": "cart"
+    "name": "Cart_Consumer"
   },
   "provider": {
-    "name": "catalog"
+    "name": "Catalog_Provider"
   },
   "interactions": [
     {

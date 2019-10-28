@@ -22,6 +22,10 @@ class ProductRepository {
                     ListOfProduct())
                     .body ?: listOf();
 
+    fun getProduct(id: Int): Product? {
+        return restTemplate.getForObject("$catalogServiceUrl/$id", Product::class.java);
+    }
+
 }
 
 class ListOfProduct : ParameterizedTypeReference<List<Product>>()
