@@ -18,9 +18,9 @@ class CatalogContractTest {
     private val client: ProductRepository = ProductRepository()
 
     @Pact(provider = "Catalog_Provider", consumer = "Search_Consumer")
-    fun getAnExistingProduct(builder: PactDslWithProvider): RequestResponsePact {
+    fun getAProduct(builder: PactDslWithProvider): RequestResponsePact {
         return builder
-                .uponReceiving("Get an existing product")
+                .uponReceiving("Get a product")
                 .method("GET")
                 .path("/products/1")
                 .willRespondWith()
@@ -34,7 +34,7 @@ class CatalogContractTest {
     }
 
     @Test
-    fun shouldFindAllAccounts() {
+    fun shouldRetrieveAProduct() {
         val products = client.getProduct(1)
         assertThat(products).isEqualTo(Product(1, "Shoes"))
     }
