@@ -24,7 +24,7 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}
-	testImplementation("au.com.dius:pact-jvm-provider-junit5_2.12:3.6.14")
+	testImplementation("au.com.dius:pact-jvm-provider-junit5:4.0.2")
 }
 
 tasks.withType<Test> {
@@ -32,6 +32,8 @@ tasks.withType<Test> {
 	systemProperty("pact.rootDir", "build/pacts")
 	systemProperty("pact.provider.version", version)
 	systemProperty("pact.verifier.publishResults", true)
+	systemProperty("pact.broker.host", "magelle.pact.dius.com.au")
+	systemProperty("pact.broker.username", "1gX52gsVt9iwwVuD9ciMaA")
 }
 
 tasks.withType<KotlinCompile> {
