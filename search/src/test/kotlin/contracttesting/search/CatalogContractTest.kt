@@ -15,7 +15,12 @@ import org.springframework.http.HttpStatus
 @PactTestFor(providerName = "Catalog_Provider", port = "8080")
 class CatalogContractTest {
 
-    private val client: ProductRepository = ProductRepository()
+
+
+
+
+
+
 
     @Pact(provider = "Catalog_Provider", consumer = "Search_Consumer")
     fun getAProduct(builder: PactDslWithProvider): RequestResponsePact {
@@ -32,6 +37,15 @@ class CatalogContractTest {
                         .asBody())
                 .toPact()
     }
+
+
+
+
+
+
+
+
+    private val client: ProductRepository = ProductRepository()
 
     @Test
     fun shouldRetrieveAProduct() {
