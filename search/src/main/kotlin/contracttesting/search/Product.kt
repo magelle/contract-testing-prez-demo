@@ -1,3 +1,6 @@
 package contracttesting.search
 
-data class Product(val id: Int, val name: String)
+data class Product(
+        val id: Int,
+        val name: String
+)

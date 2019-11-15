@@ -49,8 +49,8 @@ class CatalogContractTest {
 
     @Test
     fun shouldRetrieveAProduct() {
-        val products = client.getProduct(1)
-        assertThat(products).isEqualTo(Product(1, "Shoes"))
+        val product = client.getProduct(1)
+        assertThat(product).isEqualTo(Product(1, "Shoes", "Nice shoes"))
     }
 
 }
