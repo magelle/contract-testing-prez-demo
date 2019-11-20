@@ -8,6 +8,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients
 @EnableFeignClients
 class SearchApplication
 
+/**
+ * Consumer
+ * Production Code
+ */
 fun main(args: Array<String>) {
 	runApplication<SearchApplication>(*args)
 }

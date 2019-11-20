@@ -2,6 +2,10 @@ package contracttesting.catalog
 
 import org.springframework.stereotype.Repository
 
+/**
+ * Provider
+ * Production Code
+ */
 @Repository
 class ProductRepository {
     private val products: MutableList<Product> = mutableListOf(

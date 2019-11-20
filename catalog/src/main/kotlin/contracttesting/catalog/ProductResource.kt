@@ -1,6 +1,10 @@
 package contracttesting.catalog
 import org.springframework.web.bind.annotation.*
 
+/**
+ * Provider
+ * Production Code
+ */
 @RestController
 @RequestMapping("/products")
 class ProductResource(private val productRepository: ProductRepository) {

@@ -13,10 +13,15 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.junit.jupiter.SpringExtension
 import java.net.URL
 
+/**
+ * Provider
+ * Test Code
+ */
 @ExtendWith(SpringExtension::class)
 @SpringBootTest(classes = [CatalogApplication::class],
         webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT,
         properties = ["server.port=8080"])
+
 @Provider("Catalog_Provider")
 @PactBroker(scheme = "https", host = "magelle.pact.dius.com.au", port="443",
         authentication = PactBrokerAuth(scheme = "Bearer", username = "1gX52gsVt9iwwVuD9ciMaA", password = "")
